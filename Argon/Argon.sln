@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Argon", "Argon.vcxproj", "{137413B3-FC93-4613-8731-4BBA82252891}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{137413B3-FC93-4613-8731-4BBA82252891}.Debug|x64.ActiveCfg = Debug|x64
+		{137413B3-FC93-4613-8731-4BBA82252891}.Debug|x64.Build.0 = Debug|x64
+		{137413B3-FC93-4613-8731-4BBA82252891}.Release|x64.ActiveCfg = Release|x64
+		{137413B3-FC93-4613-8731-4BBA82252891}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D1ED058-48A5-4ECB-B6CD-5B98F0EB55E3}
+	EndGlobalSection
+EndGlobal
