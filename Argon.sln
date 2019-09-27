@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Argon", "Argon.vcxproj", "{137413B3-FC93-4613-8731-4BBA82252891}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Argon", "Argon/Argon.vcxproj", "{137413B3-FC93-4613-8731-4BBA82252891}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
