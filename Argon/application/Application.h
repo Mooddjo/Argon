@@ -1,8 +1,9 @@
 #pragma once
+#include "core/Argon.h"
 
 namespace argon
 {
-	class Application
+	class ARGON_EXPORT Application
 	{
 	public:
 		virtual void init() = 0;

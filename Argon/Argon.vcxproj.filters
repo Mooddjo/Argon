@@ -18,5 +18,13 @@
     <ClInclude Include="application\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="core\Argon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="application\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
