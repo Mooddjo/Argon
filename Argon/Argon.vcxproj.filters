@@ -15,16 +15,37 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="application\Application.h">
+    <ClInclude Include="core\Macro.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="core\Argon.h">
+    <ClInclude Include="tools\Logger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Argon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="application\ArgonApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="application\ArgonEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\Singleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\NonCopyable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="application\Application.cpp">
+    <ClCompile Include="application\ArgonApplication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="application\ArgonEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="TODO.md" />
   </ItemGroup>
 </Project>

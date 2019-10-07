@@ -3,5 +3,5 @@
 #ifdef ARGON_BUILD
 #define ARGON_EXPORT __declspec(dllexport)
 #else 
-#define ARGON_EXPORT
+#define ARGON_EXPORT __declspec(dllimport)
 #endif

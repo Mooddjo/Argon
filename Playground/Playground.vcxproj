@@ -72,10 +72,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)\bin\$(Configuration)_$(Platform)\</OutDir>
     <IntDir>$(SolutionDir)\bin\$(Configuration)_$(Platform)\int\</IntDir>
+    <IncludePath>$(SolutionDir)Argon;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)\bin\$(Configuration)_$(Platform)\</OutDir>
     <IntDir>$(SolutionDir)\bin\$(Configuration)_$(Platform)\int\</IntDir>
+    <IncludePath>$(SolutionDir)Argon;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -123,6 +125,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Argon\Argon.vcxproj">
+      <Project>{137413b3-fc93-4613-8731-4bba82252891}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

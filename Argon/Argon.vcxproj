@@ -79,11 +79,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="application\Application.h" />
-    <ClInclude Include="core\Argon.h" />
+    <ClInclude Include="application\ArgonApplication.h" />
+    <ClInclude Include="Argon.h" />
+    <ClInclude Include="application\ArgonEngine.h" />
+    <ClInclude Include="core\Macro.h" />
+    <ClInclude Include="tools\NonCopyable.h" />
+    <ClInclude Include="tools\Singleton.h" />
+    <ClInclude Include="tools\Logger.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="application\Application.cpp" />
+    <ClCompile Include="application\ArgonApplication.cpp" />
+    <ClCompile Include="application\ArgonEngine.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="TODO.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
