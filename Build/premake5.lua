@@ -11,11 +11,14 @@ project "Argon"
 	includedirs {"../Sources/Argon"}
 	files { "../Sources/Argon/**.h", "../Sources/Argon/**.cpp"}
 
+	filter "system:Windows"
+      systemversion "10.0.17763.0"
+
 	filter "configurations:Debug"
       defines { "DEBUG", "ARGON_BUILD" }
       symbols "On"
 
-   filter "configurations:Release"
+   	filter "configurations:Release"
       defines { "RELEASE" }
       optimize "On"
 
@@ -29,11 +32,14 @@ project "Playground"
 	files { "../Sources/Playground/**.h", "../Sources/Playground/**.cpp"}
 	links {"Argon"}
 
+	filter "system:Windows"
+      systemversion "10.0.17763.0"
+
 	filter "configurations:Debug"
       defines { "DEBUG"}
       symbols "On"
 
-   filter "configurations:Release"
+   	filter "configurations:Release"
       defines { "RELEASE" }
       optimize "On"
       
