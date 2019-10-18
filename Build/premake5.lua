@@ -8,6 +8,7 @@ project "Argon"
 	language "C++"
 	architecture "x86_64"
 	targetdir "../Bin/%{cfg.buildcfg}"
+	objdir "../Bin-int/%{cfg.buildcfg}"
 
 	includedirs {"../Sources/Argon"}
 	files { "../Sources/Argon/**.h", "../Sources/Argon/**.cpp"}
@@ -29,6 +30,7 @@ project "Playground"
 	language "C++"
 	architecture "x86_64"
 	targetdir "../Bin/%{cfg.buildcfg}"
+	objdir "../Bin-int/%{cfg.buildcfg}"
 
 	includedirs {"../Sources/Playground", "../Sources/Argon"}
 	files { "../Sources/Playground/**.h", "../Sources/Playground/**.cpp"}
