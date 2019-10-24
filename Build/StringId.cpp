@@ -2,12 +2,10 @@
 
 using namespace Ar;
 
-//TODO internString first and affectresult...
-StringId::StringId(const char* str)
+StringId::StringId(const char* str):
+	m_sid(-1)
 {
 	m_rawStr = strdup(str);
-	m_sid = internString(m_rawStr);
-	
 }
 
 StringId::StringId(const StringId& sid)
@@ -32,21 +30,25 @@ StringId& StringId::operator=(const StringId& sid)
 	return *this;
 }
 
-int StringId::internString(const char* str)
+int StringId::internString()
 {
-	auto sid = s_sidMap.find(str);
+	auto sid = s_sidMap.find(m_sid);
 	if(sid == s_sidMap.end())
 	{
-		int newSid = hashString(str);
-		s_sidMap[str] = newSid;
+		int newSid = hashString(m_rawStr);
+		s_sidMap[newSid] = m_rawStr;
 	}
 
-	return sid->second;
+	return m_sid;
 }
 
 bool StringId::operator==(const StringId& sid)
 {
-	return this->m_sid == sid.m_sid;
+	if (m_sid != -1)
+	{
+		return this->m_sid == sid.m_sid;
+	}
+	return (strcmp(sid.m_rawStr, this->m_rawStr) == 0);
 }
 
 
