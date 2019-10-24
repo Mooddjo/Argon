@@ -12,11 +12,16 @@ public:
 	{
 		LOGV("Playground application onInit");
 		Ar::StringId s = "coucou mon poulet";
+		Ar::StringId s2 = "coucou mon poulet";
 		string str = "CRC de ";
 		str += s.getString();
 		str += ":";
-		str += std::to_string(s.getSID());
+		str += std::to_string(s.getId());
+
+		string str2 = "CRC: ";
+		str2 += s2.internString();
 		LOGV(str.c_str());
+		LOGV(str2.c_str());
 	}
 
 

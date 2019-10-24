@@ -94,12 +94,12 @@ int StringId::internString()
 	auto sid = s_sidMap.find(m_sid);
 	if (sid == s_sidMap.end())
 	{
-		std::string s = std::string(str);
-		int hashId = crc(s.begin(), s.end());
-		s_sidMap[hashId] = _strdup(str);
+		std::string s = std::string(m_rawStr);
+		m_sid = crc(s.begin(), s.end());
+		s_sidMap[m_sid] = _strdup(m_rawStr);
 	}
 
-	return hashId;
+	return m_sid;
 }
 
 bool StringId::operator==(const StringId& sid)
@@ -108,7 +108,7 @@ bool StringId::operator==(const StringId& sid)
 	{
 		return this->m_sid == sid.m_sid;
 	}
-	return strcmp(sid.m_rawStr, this->m_rawStr) == 0);
+	return strcmp(sid.m_rawStr, this->m_rawStr) == 0;
 }
 
 
