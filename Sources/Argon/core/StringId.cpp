@@ -56,7 +56,7 @@ std::uint_fast32_t crc(InputIterator first, InputIterator last)
 
 
 
-StringId::StringId(const char* str):
+StringId::StringId(const char* str) :
 	m_sid(-1)
 {
 	m_rawStr = _strdup(str);
@@ -110,7 +110,4 @@ bool StringId::operator==(const StringId& sid)
 	}
 	return strcmp(sid.m_rawStr, this->m_rawStr) == 0;
 }
-
-
-
 
