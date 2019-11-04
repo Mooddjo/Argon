@@ -17,13 +17,12 @@ namespace Ar
 		using EventHandlers = std::list<EventFunction>;
 
 	public:
-		void subscribe(StringId name);
+		void subscribe(const StringId& eventName, EventFunction eventFunc);
 		void unsubscribe(StringId Name);
 		void fire(const Event& event);
 		void fireWithDelay(const Event& event, int ms);
 
 	protected:
-		std::list<EventFunction>			m_eventHandlers;
 		std::map<StringId, EventHandlers>	m_eventHandlersMap;
 	};
 }
