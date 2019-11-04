@@ -2,6 +2,8 @@
 #include "core/Macro.h"
 #include <map>
 
+#pragma warning(push)
+#pragma warning(disable:4251)
 
 namespace Ar
 {
@@ -16,6 +18,7 @@ namespace Ar
 		int									internString();
 		inline const char*					getString() const;
 		inline int							getId() const;
+		friend inline bool					operator<(const StringId& sid1, const StringId sid2);
 
 	protected:
 		const char*							m_rawStr;
@@ -25,4 +28,10 @@ namespace Ar
 
 	inline const char*						StringId::getString() const { return m_rawStr; }
 	inline int								StringId::getId() const { return m_sid; }	
+	inline bool								operator<(const StringId& sid1, const StringId sid2)
+	{
+		return sid1.getId() < sid2.getId();
+	}
+
 }
+#pragma warning(pop)

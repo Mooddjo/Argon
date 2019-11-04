@@ -6,6 +6,8 @@
 
 using namespace Ar;
 
+
+
 std::map<int, const char*>	Ar::StringId::s_sidMap;
 
 // CRC from https://rosettacode.org/wiki/CRC-32#C.2B.2B
@@ -60,6 +62,7 @@ StringId::StringId(const char* str) :
 	m_sid(-1)
 {
 	m_rawStr = _strdup(str);
+	internString();
 }
 
 StringId::~StringId()
@@ -76,6 +79,7 @@ StringId::StringId(const StringId& sid)
 		m_sid = sid.m_sid;
 	}
 }
+
 
 StringId& StringId::operator=(const StringId& sid)
 {
