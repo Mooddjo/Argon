@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Argon.h"
 #include "core/tests/Test_StringId.h"
+#include "core/tests/Test_EventManager.h"
 using namespace std;
 
 class Playground : public Ar::ArgonApplication
@@ -25,7 +26,8 @@ public:
 
 int main()
 {
-	Test_StringId::run();
+	//Test_StringId::run();
+	Test_EventManager::run();
 	Playground app;
 	app.start();
 	return  EXIT_SUCCESS;

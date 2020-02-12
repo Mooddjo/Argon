@@ -76,6 +76,7 @@ StringId::StringId(const StringId& sid)
 	{
 		m_rawStr = _strdup(sid.m_rawStr);
 		m_sid = sid.m_sid;
+		internString();
 	}
 }
 
@@ -87,6 +88,7 @@ StringId& StringId::operator=(const StringId& sid)
 		delete m_rawStr;
 		m_rawStr = _strdup(sid.m_rawStr);
 		m_sid = sid.m_sid;
+		internString();
 	}
 
 	return *this;
@@ -105,12 +107,5 @@ int StringId::internString()
 	return m_sid;
 }
 
-bool StringId::operator==(const StringId& sid)
-{
-	if (m_sid != -1)
-	{
-		return this->m_sid == sid.m_sid;
-	}
-	return strcmp(sid.m_rawStr, this->m_rawStr) == 0;
-}
+
 

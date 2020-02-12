@@ -8,6 +8,7 @@ namespace Ar
 {
 
 	#define BUILD_EVENT_FUNCTION(function, object) std::bind(function, object, std::placeholders::_1)
+	
 	struct Event
 	{
 		Event(): name(""){};

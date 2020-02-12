@@ -1,6 +1,7 @@
 #pragma once
+#include "core/Macro.h"
 
-class Test_EventManager
+class ARGON_EXPORT Test_EventManager
 {
 public:
 	Test_EventManager() = delete;

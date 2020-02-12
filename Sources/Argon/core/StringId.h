@@ -14,11 +14,11 @@ namespace Ar
 		~StringId();
 		StringId(const StringId& sid);
 		StringId&							operator=(const StringId& sid);
-		bool								operator==(const StringId& sid);
 		int									internString();
 		inline const char*					getString() const;
 		inline int							getId() const;
 		friend inline bool					operator<(const StringId& sid1, const StringId sid2);
+		friend inline bool					operator==(const StringId& sid1, const StringId& sid2);
 
 	protected:
 		const char*							m_rawStr;
@@ -31,6 +31,15 @@ namespace Ar
 	inline bool								operator<(const StringId& sid1, const StringId sid2)
 	{
 		return sid1.getId() < sid2.getId();
+	}
+
+	inline bool operator==(const StringId& sid1, const StringId& sid2)
+	{
+		if (sid1.m_sid != -1 && sid2.m_sid != -1)
+		{
+			return sid1.m_sid == sid2.m_sid;
+		}
+		return strcmp(sid1.m_rawStr, sid2.m_rawStr) == 0;
 	}
 
 }

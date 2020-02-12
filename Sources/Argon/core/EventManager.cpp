@@ -6,20 +6,19 @@ using namespace Ar;
 bool EventManager::isSameEventFunction(EventHandler& eventHandler1, EventHandler& eventHandler2)
 {
 	auto target1 = eventHandler1.functionName.getId();
-	auto target2 = eventHandler1.functionName.getId();
+	auto target2 = eventHandler2.functionName.getId();
 	return target1 == target2;
 }
 
 void EventManager::subscribe(const StringId& eventName, EventHandler eventHandler)
 {
-	auto handlers = m_eventHandlersMap[eventName];
+	auto& handlers = m_eventHandlersMap[eventName];
 	auto bindCompareFunction = std::bind(&EventManager::isSameEventFunction, this, std::placeholders::_1, eventHandler);
 	auto it = std::find_if(handlers.begin(), handlers.end(), bindCompareFunction);
 	if (it == handlers.end())// eventFunc not already exists in map, so insert
 	{
 		handlers.push_back(eventHandler);
 	}
-
 }
 	
 
