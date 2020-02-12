@@ -60,7 +60,7 @@ std::uint_fast32_t crc(InputIterator first, InputIterator last)
 
 StringId::StringId(const char* str) :
 	m_sid(-1)
-{
+ {
 	m_rawStr = _strdup(str);
 	internString();
 }
@@ -74,8 +74,7 @@ StringId::StringId(const StringId& sid)
 {
 	if (&sid != this)
 	{
-		delete m_rawStr;
-		m_rawStr = sid.m_rawStr;
+		m_rawStr = _strdup(sid.m_rawStr);
 		m_sid = sid.m_sid;
 	}
 }
@@ -86,7 +85,7 @@ StringId& StringId::operator=(const StringId& sid)
 	if (&sid != this)
 	{
 		delete m_rawStr;
-		m_rawStr = sid.m_rawStr;
+		m_rawStr = _strdup(sid.m_rawStr);
 		m_sid = sid.m_sid;
 	}
 
